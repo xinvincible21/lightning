@@ -1,3 +1,7 @@
+.idea
+.idea/*
+.idea_modules
+*.iml
 *.class
 *.log
 
