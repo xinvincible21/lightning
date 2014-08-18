@@ -1,4 +1,4 @@
-package adserver
+/*package adserver
 
 import akka.actor.ActorRef
 
@@ -12,4 +12,4 @@ object MasterWorkerProtocol {
   case class WorkToBeDone(work: Any)
   case object WorkIsReady
   case object NoWorkToBeDone
-}
+}*/

@@ -1,4 +1,4 @@
-package adserver
+/*package adserver
 
 import akka.actor.{ActorRef, ActorPath}
 import scala.concurrent.Future
@@ -15,4 +15,4 @@ class TestWorker(masterLocation: ActorPath) extends Worker(masterLocation) {
       WorkComplete("done")
     } pipeTo self
   }
-}
+}*/

@@ -1,28 +1,28 @@
-package adserver
+/*package adserver
 
 import akka.actor.{Terminated, ActorRef, Actor, ActorLogging}
 
 class Master extends Actor with ActorLogging {
   import MasterWorkerProtocol._
   import scala.collection.mutable.{Map, Queue}
- 
+
   // Holds known workers and what they may be working on
   val workers = Map.empty[ActorRef, Option[Tuple2[ActorRef, Any]]]
   // Holds the incoming list of work to be done as well
   // as the memory of who asked for it
   val workQ = Queue.empty[Tuple2[ActorRef, Any]]
- 
+
   // Notifies workers that there's work available, provided they're
   // not already working on something
   def notifyWorkers(): Unit = {
     if (!workQ.isEmpty) {
-      workers.foreach { 
+      workers.foreach {
         case (worker, m) if (m.isEmpty) => worker ! WorkIsReady
         case _ =>
       }
     }
   }
- 
+
   def receive = {
     // Worker is alive. Add him to the list, watch him for
     // death, and let him know if there's work to be done
@@ -31,7 +31,7 @@ class Master extends Actor with ActorLogging {
       context.watch(worker)
       workers += (worker -> None)
       notifyWorkers()
- 
+
     // A worker wants more work.  If we know about him, he's not
     // currently doing anything, and we've got something to do,
     // give it to him.
@@ -48,14 +48,14 @@ class Master extends Actor with ActorLogging {
           worker.tell(WorkToBeDone(work), workSender)
         }
       }
- 
+
     // Worker has completed its work and we can clear it out
     case WorkIsDone(worker) =>
       if (!workers.contains(worker))
         log.error("Blurgh! {} said it's done work but we didn't know about him", worker)
       else
         workers += (worker -> None)
- 
+
     // A worker died.  If he was doing anything then we need
     // to give it to someone else so we just add it back to the
     // master and let things progress as usual
@@ -67,11 +67,11 @@ class Master extends Actor with ActorLogging {
         self.tell(work, workSender)
       }
       workers -= worker
- 
+
     // Anything other than our own protocol is "work to be done"
     case work =>
       log.info("Queueing {}", work)
       workQ.enqueue(sender -> work)
       notifyWorkers()
   }
-}
+}*/

@@ -1,4 +1,4 @@
-package adserver
+/*package adserver
 
 import akka.actor.{ActorRef, ActorPath, ActorLogging, Actor}
 
@@ -58,4 +58,4 @@ abstract class Worker(masterLocation: ActorPath)
   }
  
   def receive = idle
-}
+}*/

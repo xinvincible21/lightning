@@ -13,8 +13,9 @@ object AdserverBuild extends Build {
       "com.typesafe.akka" %% "akka-slf4j" % "2.3.0",
       "ch.qos.logback" % "logback-classic" % "1.0.10",
       "com.typesafe.akka" %% "akka-testkit" % "2.3.0" % "test",
-      "org.scalatest" % "scalatest_2.11" % "2.2.1" % "test"
-  )
+      "org.scalatest" % "scalatest_2.11" % "2.2.1" % "test",
+      "com.typesafe.akka" %% "akka-cluster" % "2.3.3"
+    )
   )
 
   val adserver = Project("adserver", file("."), settings = buildSettings)

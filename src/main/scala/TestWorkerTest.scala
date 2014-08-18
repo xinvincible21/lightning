@@ -1,4 +1,4 @@
-package adserver
+/*package adserver
 
 import akka.actor.{ActorPath, Props, ActorSystem}
 //import org.scalatest._
@@ -35,4 +35,4 @@ import akka.actor.{ActorPath, Props, ActorSystem}
 //      expectMsgAllOf("Hithere", "Guys", "So", "What's", "Up?")
 //    }
 //  }
-//}
+//}*/
