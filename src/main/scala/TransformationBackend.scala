@@ -10,7 +10,6 @@ import akka.actor.ActorLogging
 import akka.actor.Actor
 import akka.actor.RootActorPath
 
-
 object TransformationBackend {
   def main(args: Array[String]): Unit = {
     // Override the configuration of the port when specified as program argument

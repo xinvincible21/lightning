@@ -11,7 +11,6 @@ import akka.util.Timeout
 import akka.actor.{ Actor, ActorRef, Props, Terminated }
 import java.util.concurrent.atomic.AtomicInteger
 
-
 object TransformationFrontend {
   def main(args: Array[String]): Unit = {
     // Override the configuration of the port when specified as program argument
