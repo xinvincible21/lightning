@@ -4,7 +4,7 @@ import Keys._
 object AdserverBuild extends Build {
 
   val buildSettings = Defaults.defaultSettings ++ Seq(
-    name := "adserver",
+    name := "test",
     version := "0.0.1",
     organization := "invincible",
     scalaVersion := "2.10.3",
@@ -18,6 +18,6 @@ object AdserverBuild extends Build {
     )
   )
 
-  val adserver = Project("adserver", file("."), settings = buildSettings)
+  val adserver = Project("test", file("."), settings = buildSettings)
 
 }
